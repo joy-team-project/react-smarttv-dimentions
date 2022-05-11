@@ -1,0 +1,40 @@
+{
+  "name": "react-smarttv-diemntions",
+  "version": "1.0.0",
+  "license": "Apache-2.0",
+  "description": "Keep the same aspect ratio on different devices 1280:720 for SmartTV, using Typescript + React",
+  "main": "./lib/cjs/index.js",
+  "module": "./lib/esm/index.js",
+  "types": "./lib/esm/index.d.ts",
+  "files": [
+    "/lib"
+  ],
+  "scripts": {
+    "prepack": "yarn build",
+    "prebuild": "yarn clean",
+    "build": "rollup -c",
+    "clean": "rimraf lib my-react-package-*.tgz",
+    "watch": "rollup -cw"
+  },
+  "keywords": [],
+  "author": "Nguyễn Sỹ Thành Công <thanhcongns94@gmail.com>",
+  "peerDependencies": {
+    "react": "*"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^21.0.0",
+    "@rollup/plugin-node-resolve": "^13.0.5",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.49.0",
+    "rollup-obfuscator": "^3.0.1",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "tslib": "^2.4.0",
+    "typescript": "^4.2.4"
+  },
+  "dependencies": {
+    "@types/react": "*",
+    "platform-smart-tv": "git+https://github.com/joy-team-project/platform-smart-tv.git#v1.0.0"
+  }
+}
